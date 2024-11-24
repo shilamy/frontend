@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --blue-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6131bd -78.47%,
+    #5c38a9 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(147, 161, 216, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.small-shadow {
+  box-shadow: 0px 1px 2px 0px #3519173B;
+}
+.medium-shadow{
+  box-shadow: 0px 4px 4px 0px #1E0E0C42;
+  ;
+}
+
+.large-shadow{
+  box-shadow: 0px 6px 6px 0px #1E0E0C47;
+}
+
