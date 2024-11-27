@@ -2,9 +2,13 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div>
-        <p className="bg-dimwhite">Welcome Ask that Question and Get the Solutions.</p>
-    </div>
+    <section id ="home">
+      <div>
+        <div>
+          <h1>Find & Ask Questions, Learning from Everyone.</h1>
+        </div>
+      </div>
+    </section>
   )
 }
 

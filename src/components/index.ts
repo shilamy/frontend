@@ -7,6 +7,7 @@ import Modal from "./Modal";
 import QuestionCard from "./QuestionCard";
 import SearchBar from "./SearchBar";
 import AskQuestion from "./AskQuestion";
+import AskButton from "./AskButton";
 
 
 
@@ -20,5 +21,6 @@ export {
     QuestionCard,
     SearchBar,
     AskQuestion,
+    AskButton
     // ... other components
 }

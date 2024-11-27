@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
 
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 
 :root {
-  --blue-gradient: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6131bd -78.47%,
-    #5c38a9 91.61%
+--bg-blue-gradient: linear-gradient(
+    157.81deg,
+    #005397 0.89%,
+    #bfbfbf 17.23%,
+    #98a2b3 42.04%,
+    #2d2c2c 55.12%,
+    #183d5a 71.54%,
+    #005397 100%
   );
   --card-shadow: 0px 20px 100px -10px rgba(147, 161, 216, 0.1);
+}
+
+.bg-blue-gradient {
+  background: var(--blue-gradient);
 }
 
 * {
@@ -22,12 +30,15 @@
 .small-shadow {
   box-shadow: 0px 1px 2px 0px #3519173B;
 }
-.medium-shadow{
+
+.medium-shadow {
   box-shadow: 0px 4px 4px 0px #1E0E0C42;
-  ;
 }
 
-.large-shadow{
+.large-shadow {
   box-shadow: 0px 6px 6px 0px #1E0E0C47;
 }
 
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}

@@ -1,12 +1,11 @@
 "use client";
-
 import React, { useState } from "react";
+import { AskButtonProps } from "@/types";
 
-
-const AskQuestion: React.FC = () => {
+const AskButton = ({ title, btnType, containerStyles }: AskButtonProps) => {
   const [showModal, setShowModal] = useState(false);
-  const [question, setQuestion] = useState<string>(""); 
-  const [error, setError] = useState<string | null>(null); 
+  const [question, setQuestion] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
 
   const handleAddQuestion = async () => {
     if (!question.trim()) {
@@ -15,7 +14,7 @@ const AskQuestion: React.FC = () => {
     }
 
     try {
-      const response = await fetch("../pages/api/questions.ts", {
+      const response = await fetch("/api/questions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,7 +27,7 @@ const AskQuestion: React.FC = () => {
       }
 
       console.log("Question added!");
-      setShowModal(false); 
+      setShowModal(false);
       setQuestion("");
     } catch (error) {
       console.error(error);
@@ -37,23 +36,20 @@ const AskQuestion: React.FC = () => {
   };
 
   const handleCancel = () => {
-    setShowModal(false); 
-    setQuestion(""); 
-    setError(null); 
+    setShowModal(false);
+    setQuestion("");
+    setError(null);
   };
 
   return (
     <div>
-      {/* Ask Question Button */}
-      {/*<button
-        onClick={() => setShowModal(true)}
-        className="px-4 py-2 text-white bg-amber-500 rounded-full hover:bg-blue-600"
+      <button
+        type={btnType || "button"}
+        className={`custom-btn ${containerStyles}`}
+        onClick={() => setShowModal(true)} 
       >
-        Ask Question
-      </button>*/}
-
-
-      {/* Modal */}
+        {title}
+      </button>
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg w-96 p-6 shadow-lg">
@@ -90,4 +86,4 @@ const AskQuestion: React.FC = () => {
   );
 };
 
-export default AskQuestion;
+export default AskButton;
