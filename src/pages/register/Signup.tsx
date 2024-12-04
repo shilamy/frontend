@@ -11,7 +11,7 @@ const Signup = () => {
         <h1 className="font-semibold text-2xl mb-4">Create your Account</h1>
         <RegisterForm/>
         <p className="text-center">
-          Have an Account? <Link className="text-charcoalGray" href="/Login">Sign In</Link></p>
+          Have an Account? <Link className="text-charcoalGray" href="/login/Login">Sign In</Link></p>
     </div>
   </div>
   );

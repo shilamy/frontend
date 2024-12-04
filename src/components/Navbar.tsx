@@ -48,7 +48,7 @@ const Navbar = () => {
       containerStyles="px-4 py-2 text-white bg-dark rounded-full hover:bg-charcoalGray"
 
       />
-        <a href="./register/Login">
+        <a href="./login/Login">
           <button className="px-4 py-2 text-white bg-charcoalGray rounded-[10px]">
             Log In
           </button>
@@ -92,7 +92,7 @@ const Navbar = () => {
               {/* Buttons */}
               <div className="hidden sm:flex items-center space-x-4">
         <AskQuestion />
-        <a href="./register/Login">
+        <a href="./login/Login">
           <button className="px-4 py-2 text-white bg-charcoalGray rounded-[10px]">
             Log In
           </button>
