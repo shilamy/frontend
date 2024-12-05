@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
-import Login from "../login/Login"
+import Login from "../login/page"
 import { Alert } from "@/components/ui/alert"
 
 export const RegisterForm = () =>{
@@ -26,6 +26,8 @@ export const RegisterForm = () =>{
             if(res.ok){
                 //Redirecting to the login page
                 Login()
+            } else{
+                setError((await res.json()).error)
             }
         } catch (error: any){
             setError(error?.message)
@@ -33,8 +35,8 @@ export const RegisterForm = () =>{
         }
     }
     return(
-        <form onSubmit={onSubmit} className="space-y-8 w-[400px]">
-            <div className="grid w-full max-w-sm items-center gap-1.5">
+        <form onSubmit={onSubmit} className="space-y-8 w-full sm:w-[400px]">
+            <div className="grid w-full items-center gap-1.5">
                 <label htmlFor="email">Email</label>
                 <Input
                 required
@@ -43,7 +45,7 @@ export const RegisterForm = () =>{
                 id="email" 
                 type="email" />
                 </div>
-                <div className="grid w-full max-w-sm items-center gap-1.5">
+                <div className="grid w-full items-center gap-1.5">
                 <label htmlFor="password">Password</label>
                 <Input
                 required

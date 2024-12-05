@@ -1,23 +1,56 @@
 import { facebook, instagram, linkedin, twitter  } from "../assets";
 
+
 export const navLinks = [
     {
       id: "home",
       title: "Home",
+      url: "/",
     },
     {
-      id: "categories",
-      title: "Categories",
+      id: "studyplan",
+      title: "StudyPlan",
+      url: "/study/studyplan",
     },
     {
-      id: "about",
-      title: "About",
+      id: "resources",
+      title: "Resources",
+      url: "/resources/resources",
     },
     {
-      id: "team",
-      title: "Team",
+      id: "group",
+      title: "Group",
+      url: "/groups/groups",
     },
   ];
+  
+
+export const mockQuestions = [
+  {
+    id: 1,
+    title: "How do I solve quadratic equations?",
+    content: "I'm struggling with quadratic equations. Can someone explain the steps to solve them?",
+    author: "Math Newbie",
+    avatar: "https://api.dicebear.com/6.x/avataaars/svg?seed=Math"
+  },
+  {
+    id: 2,
+    title: "What's the difference between mitosis and meiosis?",
+    content: "I always mix up mitosis and meiosis. Can someone explain the key differences?",
+    author: "Biology Student",
+    avatar: "https://api.dicebear.com/6.x/avataaars/svg?seed=Biology"
+  },
+  {
+    id: 3,
+    title: "How to structure an essay?",
+    content: "I need help understanding how to structure an academic essay. Any tips?",
+    author: "Essay Writer",
+    avatar: "https://api.dicebear.com/6.x/avataaars/svg?seed=Essay"
+  }
+];
+
+
+ 
 
   
 export const footerLinks = [

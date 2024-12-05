@@ -16,7 +16,6 @@ export default {
         center: true,
       },
       colors: {
-       
         primary: "#005397",
         secondary: "#000E1A",
         dark: "#183D5A",
@@ -27,12 +26,12 @@ export default {
         lightgray: "#F4F4F4",
         dimwhite: "rgba(255, 255, 255, 0.7)",
 
-        // Additional colors from shadcn/ui
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -52,6 +51,16 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
         },
       },
       fontFamily: {
@@ -76,7 +85,7 @@ export default {
         "large-shadow": "0px 6px 6px 0px #1E0E0C47",
       },
       backgroundImage: {
-        "blue-gradient": "var(--blue-gradient)",
+        "blue-gradient": "var(--bg-blue-gradient)",
       },
     },
     screens: {
