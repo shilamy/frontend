@@ -1,101 +1,64 @@
 "use client"
 
-import { useState } from 'react'
-import { Home, BookOpen, Monitor, Users, Plus, User } from 'lucide-react'
+import {Home, BookOpen, FolderOpen, Users, Plus } from 'lucide-react'
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { QuestionModal } from "@/pages/dashboard/questions"
+
 
 export function AppSidebar() {
   const pathname = usePathname()
-  const [isQuestionModalOpen, setIsQuestionModalOpen] = useState(false)
 
   return (
-    <>
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t bg-white">
-        <div className="grid h-16 grid-cols-5 items-center">
-          <Link href="/" className="flex flex-col items-center justify-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "h-12",
-                pathname === "/" && "text-primary"
-              )}
-            >
-              <Home className="h-5 w-5" />
-              <span className="sr-only">Home</span>
-            </Button>
-          </Link>
-          <Link href="/study/studyplan" className="flex flex-col items-center justify-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "h-12",
-                pathname === "/studyplan" && "text-primary"
-              )}
-            >
-              <BookOpen className="h-5 w-5" />
-              <span className="sr-only">Study Plan</span>
-            </Button>
-          </Link>
-          <Link href="/resources/resources" className="flex flex-col items-center justify-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "h-12",
-                pathname === "/resources/resources" && "text-primary"
-              )}
-            >
-              <Monitor className="h-5 w-5" />
-              <span className="sr-only">Resources</span>
-            </Button>
-          </Link>
-          <Link href="/groups/groups" className="flex flex-col items-center justify-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "h-12",
-                pathname === "/groups/groups" && "text-primary"
-              )}
-            >
-              <Users className="h-5 w-5" />
-              <span className="sr-only">Groups</span>
-            </Button>
-          </Link>
-          <Link href="/profile/profile" className="flex flex-col items-center justify-center">
-            <Button
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "h-12",
-                pathname === "/profile" && "text-primary"
-              )}
-            >
-              <User className="h-5 w-5" />
-              <span className="sr-only">Profile</span>
-            </Button>
-          </Link>
-        </div>
-        <Button
-          size="icon"
-          className="absolute left-1/2 top-0 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full"
-          onClick={() => setIsQuestionModalOpen(true)}
+      <nav className="flex justify-around p-2">
+        <Link
+          href="/"
+          className={cn(
+            "flex flex-col items-center p-2 text-xs",
+            pathname === "/" ? "text-primary" : "text-muted-foreground"
+          )}
         >
-          <Plus className="h-6 w-6" />
-          <span className="sr-only">Ask a Question</span>
-        </Button>
-      </div>
-      <QuestionModal
-        isOpen={isQuestionModalOpen}
-        onClose={() => setIsQuestionModalOpen(false)}
-      />
-    </>
+          <Home className="w-5 h-5" />
+          <span>Home</span>
+        </Link>
+        <Link
+          href="/study/studyplan"
+          className={cn(
+            "flex flex-col items-center p-2 text-xs",
+            pathname === "/study/studyplan" ? "text-primary" : "text-muted-foreground"
+          )}
+        >
+          <BookOpen className="w-5 h-5" />
+          <span>Study plan</span>
+        </Link>
+        <button className="flex flex-col items-center p-2">
+          <div className="rounded-full bg-primary p-4">
+            <Plus className="w-5 h-5 text-primary-foreground" />
+          </div>
+        </button>
+        <Link
+          href="/resources/resources"
+          className={cn(
+            "flex flex-col items-center p-2 text-xs",
+            pathname === "/resources/resources" ? "text-primary" : "text-muted-foreground"
+          )}
+        >
+          <FolderOpen className="w-5 h-5" />
+          <span>Resources</span>
+        </Link>
+        <Link
+          href="/groups"
+          className={cn(
+            "flex flex-col items-center p-2 text-xs",
+            pathname === "/groups" ? "text-primary" : "text-muted-foreground"
+          )}
+        >
+          <Users className="w-5 h-5" />
+          <span>Groups</span>
+        </Link>
+      </nav>
+    </div>
   )
 }
 

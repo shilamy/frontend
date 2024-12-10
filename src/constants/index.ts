@@ -20,7 +20,7 @@ export const navLinks = [
     {
       id: "group",
       title: "Group",
-      url: "/groups/groups",
+      url: "/groups",
     },
   ];
   
@@ -49,8 +49,57 @@ export const mockQuestions = [
   }
 ];
 
+export const groups: Group[] = [
+  {
+    id: "1",
+    name: "Team Alpha",
+    description: "For students interested in mathematics and economics...",
+    memberCount: 2,
+    isMember: true,
+    avatar: "/placeholder.svg",
+    members: [
+      { avatar: "/placeholder.svg", name: "Member 1" },
+      { avatar: "/placeholder.svg", name: "Member 2" }
+    ]
+  },
+  {
+    id: "2",
+    name: "Accounting students",
+    description: "For students interested in Accounting and Finance",
+    memberCount: 7,
+    isMember: false,
+    avatar: "/placeholder.svg",
+    members: [
+      { avatar: "/placeholder.svg", name: "Member 1" },
+      { avatar: "/placeholder.svg", name: "Member 2" },
+      { avatar: "/placeholder.svg", name: "Member 3" }
+    ]
+  },
+  {
+    id: "3",
+    name: "Physics",
+    description: "For physics enthusiasts and learners",
+    memberCount: 2,
+    isMember: false,
+    avatar: "/placeholder.svg",
+    members: [
+      { avatar: "/placeholder.svg", name: "Member 1" },
+      { avatar: "/placeholder.svg", name: "Member 2" }
+    ]
+  },
+  {
+    id: "4",
+    name: "General studies",
+    description: "For students interested in all subjects",
+    memberCount: 1,
+    isMember: false,
+    avatar: "/placeholder.svg",
+    members: [
+      { avatar: "/placeholder.svg", name: "Member 1" }
+    ]
+  }
+];
 
- 
 
   
 export const footerLinks = [

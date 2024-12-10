@@ -14,3 +14,19 @@ export interface AskButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
    
 }
+
+export interface Member {
+  avatar: string;
+  name: string;
+}
+
+
+export interface Group {
+  id: string
+  name: string
+  description: string
+  memberCount: number
+  isMember: boolean
+  avatar: string
+  members: Member[]
+}
