@@ -30,3 +30,18 @@ export interface Group {
   avatar: string
   members: Member[]
 }
+
+export interface GroupMember {
+  avatar: string;
+  name: string;
+}
+
+export interface Resource {
+  fileUrl(fileUrl: any, arg1: string): void;
+  uploadDate: string | number | Date;
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  file: string;
+}

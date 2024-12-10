@@ -1,3 +1,4 @@
+import { Group } from "@/types";
 import { facebook, instagram, linkedin, twitter  } from "../assets";
 
 
@@ -10,12 +11,12 @@ export const navLinks = [
     {
       id: "studyplan",
       title: "StudyPlan",
-      url: "/study/studyplan",
+      url: "/studys",
     },
     {
       id: "resources",
       title: "Resources",
-      url: "/resources/resources",
+      url: "/resources",
     },
     {
       id: "group",

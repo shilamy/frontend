@@ -23,10 +23,10 @@ export function AppSidebar() {
           <span>Home</span>
         </Link>
         <Link
-          href="/study/studyplan"
+          href="/studys"
           className={cn(
             "flex flex-col items-center p-2 text-xs",
-            pathname === "/study/studyplan" ? "text-primary" : "text-muted-foreground"
+            pathname === "/studys" ? "text-primary" : "text-muted-foreground"
           )}
         >
           <BookOpen className="w-5 h-5" />
@@ -38,10 +38,10 @@ export function AppSidebar() {
           </div>
         </button>
         <Link
-          href="/resources/resources"
+          href="/resources"
           className={cn(
             "flex flex-col items-center p-2 text-xs",
-            pathname === "/resources/resources" ? "text-primary" : "text-muted-foreground"
+            pathname === "/resources" ? "text-primary" : "text-muted-foreground"
           )}
         >
           <FolderOpen className="w-5 h-5" />

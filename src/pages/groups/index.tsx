@@ -15,11 +15,9 @@ import {
 } from "@/components/ui/select"
 import { AppSidebar } from "@/components/AppSidebar"
 import {groups} from "@/constants"
+import { GroupMember } from "@/types"
+import Navbar from "@/components/Navbar"
 
-interface GroupMember {
-  avatar: string;
-  name: string;
-}
 
 export default function Groups() {
   const [filter, setFilter] = useState<"all" | "my">('all')
@@ -34,8 +32,8 @@ const filteredGroups = filter === 'my'
   return (
     <div className="min-h-screen pb-16 bg-[#FFFDF9]">
       <header className="border-b p-4 bg-[#005397] text-white">
-        <div className="flex items-center justify-between">
-          <h1 className="text-xl font-semibold">Groups</h1>
+        <div>
+          <Navbar/>
         </div>
       </header>
 
@@ -94,8 +92,8 @@ const filteredGroups = filter === 'my'
                     </p>
                     <div className="flex items-center mt-2 gap-2">
                       <div className="flex -space-x-2">
-                        {group.members.slice(0, 3).map((member: GroupMember, index: number) => (
-                          <Avatar key={index} className="h-6 w-6 border-2 border-background">
+                        {group.members.slice(0, 3).map((member: GroupMember, i) => (
+                          <Avatar key={i} className="h-6 w-6 border-2 border-background">
                             <AvatarImage src={member.avatar} />
                             <AvatarFallback>{member.name[0]}</AvatarFallback>
                           </Avatar>
